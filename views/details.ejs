@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>小小相册</title>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+					<a class="navbar-brand" >小小相册</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="/upload">上传图片</a>
+						</li>
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		
+		
+
+		<div class="container">
+			
+			<ol class="breadcrumb">
+			  <li><a href="/">首页</a></li>
+			  <li class="active"><%=imgName%></li>
+			</ol>
+			
+			<div class="row">
+				<% for(var i=0;i<allImgName.length;i++){%>
+
+				<div class="col-xs-6 col-md-3">
+					<a class="thumbnail">
+						<img src="<%= allImgName[i] %>" alt="">
+					</a>
+				</div>
+
+				<% } %>
+
+			</div>
+		</div>
+
+		<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+
+</html>
